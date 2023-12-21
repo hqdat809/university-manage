@@ -1,0 +1,7 @@
+@use "/src/themes/index.scss" as *;
+
+.SwitchPrimary {
+  &.ant-switch-checked {
+    background: $light-green-gradient;
+  }
+}

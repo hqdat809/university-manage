@@ -17,9 +17,10 @@
 }
 
 .Input {
+  font-size: 16px;
   border: 1px solid $color-border-gray;
   border-radius: 4px;
-  padding: 6px 12px;
+  padding: 8px 12px;
 
   &.ant-input:hover,
   &.ant-input-focused,

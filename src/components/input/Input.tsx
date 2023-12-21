@@ -21,9 +21,9 @@ const Input = ({ className, type, ...rest }: IInputProps) => {
   return (
     <InputAnt
       className={inputClassName}
-      {...rest}
       type={type || "text"}
       placeholder=" "
+      {...rest}
     />
   );
 };

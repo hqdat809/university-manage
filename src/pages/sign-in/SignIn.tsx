@@ -4,11 +4,13 @@ import {
   InstagramOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
-import { Button, Col, Form, Layout, Menu, Row, Switch, Typography } from "antd";
+import { Col, Form, Layout, Menu, Row, Typography } from "antd";
 import { Link } from "react-router-dom";
 import signInImage from "assets/images/img-signin.jpg";
 import "./SignIn.scss";
 import { Input } from "src/components/input";
+import { PrimaryButton } from "src/components/buttons";
+import SwitchButton from "src/components/switch/Switch";
 
 const { Title } = Typography;
 const { Header, Footer, Content } = Layout;
@@ -62,7 +64,7 @@ const SignIn = () => {
                     },
                   ]}
                 >
-                  <Input placeholder="" />
+                  <Input placeholder="Email" />
                 </Form.Item>
 
                 <Form.Item
@@ -84,18 +86,18 @@ const SignIn = () => {
                   className="aligin-center"
                   valuePropName="checked"
                 >
-                  <Switch defaultChecked onChange={onChange} />
+                  <SwitchButton defaultChecked onChange={onChange} />
                   Remember me
                 </Form.Item>
 
                 <Form.Item>
-                  <Button
+                  <PrimaryButton
                     type="primary"
                     htmlType="submit"
                     style={{ width: "100%" }}
                   >
                     SIGN IN
-                  </Button>
+                  </PrimaryButton>
                 </Form.Item>
                 <p className="font-semibold text-muted">
                   Don't have an account?{" "}
