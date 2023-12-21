@@ -1,0 +1,95 @@
+@use 'themes/index.scss' as *;
+
+.PrimaryButton {
+  border-color: transparent;
+  border-radius: 8px;
+  border: 0;
+  padding: 4px 16px;
+  @include background-gradient;
+
+  &:hover,
+  &:active,
+  &:focus {
+    @include background-gradient;
+  }
+
+  &.ant-btn {
+    &:hover,
+    &:active,
+    &:focus {
+      @include background-gradient;
+    }
+  }
+
+  &.ant-btn-primary {
+    &:disabled {
+      background-color: $color-disabled;
+    }
+  }
+}
+
+.LinkButton {
+  border: none;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.OutlineButton {
+  border-radius: 8px;
+  background: $light-green-gradient !important;
+  color: $dark-green09;
+  font-weight: 700;
+  position: relative;
+  border-color: inherit;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: white !important;
+    color: $dark-green09;
+  }
+
+  &:hover {
+    color: $dark-green09;
+    border-color: inherit;
+  }
+
+  span {
+    z-index: 2;
+  }
+}
+
+.OutlineButton::before {
+  content: '';
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: block;
+  background: $white;
+  z-index: -1;
+  opacity: 1;
+  border-radius: 6px;
+}
+
+.LinkButton {
+  color: $dark-green09;
+  font-size: 16px;
+  font-weight: 700;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $dark-green09;
+  }
+}

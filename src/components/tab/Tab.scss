@@ -1,0 +1,110 @@
+@use 'themes/index.scss' as *;
+
+.Tabs {
+  .ant-tabs-tab {
+    padding: 6px 16px !important;
+    gap: 8px;
+    background: $grayscale18;
+    border-radius: 8px !important;
+    margin-right: 1rem !important;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $font-color-default;
+    transition: none !important;
+    border: none !important;
+    letter-spacing: 0.016em;
+    font-feature-settings: 'salt' on;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: block;
+      background: $grayscale18;
+      z-index: -1;
+      opacity: 1;
+      border-radius: 6px;
+    }
+
+    .ant-tabs-tab-btn:active {
+      color: $font-color-default;
+    }
+
+    &:hover {
+      color: $dark-green09;
+    }
+
+    .ant-tabs-tab-btn {
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      & span {
+        display: flex;
+        max-width: 150px;
+      }
+    }
+  }
+
+  .ant-tabs-tab-active {
+    background: $light-green-gradient !important;
+
+    .ant-tabs-tab-btn {
+      color: $dark-green09 !important;
+    }
+
+    &::before {
+      background: $light-green06 !important;
+    }
+  }
+}
+
+.ant-tabs-top > .ant-tabs-nav:before {
+  border-bottom: none !important;
+}
+
+.ant-tooltip-inner {
+  border-radius: 8px !important;
+  background-color: $grayscale12;
+  color: $font-color-default;
+}
+.ant-tooltip-arrow-content {
+  --antd-arrow-background-color: $grayscale11;
+}
+
+@media (min-width: 768px) {
+  .scoll-tab {
+    & .ant-tabs-nav-list {
+      overflow-x: auto;
+      padding-bottom: 12px;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+        background-color: $color-border-gray-2;
+        border-radius: 4px;
+        margin-left: 12px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 5px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: $dark-green09;
+      }
+    }
+  }
+}
+
+.Tabs__panel-header {
+  .ant-tabs-nav-more {
+    display: none;
+  }
+}

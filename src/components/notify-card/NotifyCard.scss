@@ -1,0 +1,68 @@
+@use "themes/index.scss" as *;
+
+.NotifyCard {
+  display: flex;
+  line-height: normal;
+  cursor: pointer;
+  margin-bottom: 12px;
+  padding-right: 12px;
+
+  &:hover {
+    background-color: $grayscale17;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    &-title {
+      width: 100%;
+      font-weight: 700;
+      font-size: 16px;
+      color: $font-color-default;
+      display: flex;
+      justify-content: space-between;
+
+      &-text {
+        text-align: start;
+      }
+
+      &-icon {
+        display: flex;
+        align-items: center;
+
+        & svg {
+          width: 13px;
+          height: 13px;
+          fill: $dark-green09;
+        }
+      }
+    }
+
+    &-time {
+      font-weight: 400;
+      font-size: 12px;
+      color: $grayscale15;
+      padding: 4px 0;
+    }
+
+    &-content {
+      font-weight: 400;
+      font-size: 14px;
+      text-align: start;
+      color: $font-color-default;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+    }
+  }
+
+  &__avatar {
+    margin-right: 8px;
+    .ant-avatar-square {
+      border-radius: 8px;
+    }
+  }
+}

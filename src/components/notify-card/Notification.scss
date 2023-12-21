@@ -1,0 +1,80 @@
+@use "themes/index.scss" as *;
+
+.Notification {
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 10%), 0px 4px 5px rgb(0 0 0 / 7%), 0px 1px 10px rgb(0 0 0 / 6%);
+  border-radius: 8px;
+  border: 1px solid #f2f2f2;
+  background-color: #ffffff;
+  max-height: 550px;
+  width: 25vw;
+  position: absolute;
+  top: 50px;
+  padding: 8px;
+  height: 550px;
+  right: 0;
+
+  &__empty {
+    color: $grayscale14;
+  }
+
+  &__cards {
+    height: 88%;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: $color-border-gray-2;
+      border-radius: 4px;
+      margin-left: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      width: 5px;
+      height: 8px;
+      border-radius: 4px;
+      background-color: $dark-green09;
+    }
+  }
+}
+
+.Navbar__buttons-notification {
+  padding: 12px;
+}
+
+.ListNotificationsCard {
+  max-height: 480px;
+  overflow: auto;
+  height: 480px;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: $color-border-gray-2;
+    border-radius: 4px;
+    margin-left: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 5px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: $dark-green09;
+  }
+}
+
+@media (max-width: 767px) {
+  .Notification {
+    top: 50;
+    right: -134px;
+    height: 700px;
+    width: 100vw;
+    max-height: max-content;
+    overflow-y: scroll;
+  }
+
+  .ListNotificationsCard {
+    max-height: calc(100vh - 160px);
+    height: calc(100vh - 160px);
+  }
+}

@@ -1,0 +1,144 @@
+@use 'themes/index.scss' as *;
+
+.RowTableMobile {
+  width: 100%;
+  border: 1px solid $color-border-gray;
+  border-radius: 8px;
+  flex: 9;
+
+  &__loading {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  &__line {
+    display: flex;
+    width: 100%;
+    height: 0;
+    border: 1px solid $color-border-gray;
+  }
+
+  &__item {
+    padding: 12px;
+
+    &-label {
+      display: flex;
+      font-size: $font-size-small;
+      font-weight: 400;
+      line-height: 16px;
+      color: $grayscale11;
+    }
+
+    &-value {
+      font-size: $font-size-default;
+      font-weight: 700;
+      line-height: 16px;
+      color: $font-color-default;
+
+      .ant-select-selection-item {
+        font-weight: 700 !important;
+        line-height: 16px !important;
+      }
+
+      .ant-select {
+        width: 50% !important;
+      }
+    }
+
+    &-separate {
+      display: flex;
+
+      &-item {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.RowTableInfoMobile {
+  border-radius: 8px;
+  background: $light-green-gradient !important;
+  position: relative;
+  border-color: inherit;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  justify-content: space-between;
+
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: white !important;
+    color: $dark-green09;
+  }
+
+  &:hover {
+    color: $dark-green09;
+    border-color: inherit;
+  }
+
+  span {
+    z-index: 2;
+  }
+  &::before {
+    content: '';
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+    background: $white;
+    z-index: -1;
+    opacity: 1;
+    border-radius: 6px;
+  }
+
+  &__content {
+    display: flex;
+    width: 90%;
+  }
+
+  &__image {
+    margin-right: 12px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 2px;
+
+    &-title {
+      font-size: $font-size-medium;
+      max-width: 80%;
+      color: $font-color-default;
+      font-weight: 700;
+      line-height: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-text {
+      font-size: $font-size-default;
+      color: $grayscale11;
+      line-height: 18px;
+      font-weight: 400;
+    }
+  }
+
+  &__action {
+    height: 100%;
+  }
+}

@@ -1,0 +1,131 @@
+@use "/src/themes/index.scss" as *;
+
+.SelectInput {
+  text-align: left;
+  border-radius: 4px !important;
+}
+
+.Input_antd_custom {
+  width: 100%;
+  height: 38px;
+  border-radius: 4px;
+  border: 1px solid $color-border-gray-2;
+
+  &:hover {
+    color: $color-border-gray-2 !important;
+  }
+}
+
+.Input {
+  border: 1px solid $color-border-gray;
+  border-radius: 4px;
+  padding: 6px 12px;
+
+  &.ant-input:hover,
+  &.ant-input-focused,
+  &.ant-input:focus,
+  &.ant-input-affix-wrapper:hover,
+  &.ant-input-affix-wrapper-focused,
+  &.ant-input-affix-wrapper:focus {
+    border-right-width: 1px;
+    border: 1px solid $color-border-gray;
+    box-shadow: none;
+  }
+
+  &__search {
+    width: 320px;
+  }
+}
+
+.FloatLabel__label-phone {
+  left: 50px !important;
+}
+
+@include float-label;
+
+.ant-input-affix-wrapper-status-error:not(
+    .ant-input-affix-wrapper-disabled
+  ):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper {
+  @include form-item-error;
+
+  &:hover,
+  &:focus,
+  &-focused {
+    @include form-item-error;
+  }
+}
+
+.Input__search {
+  padding: 4px 12px;
+}
+
+.PhoneInputInput {
+  height: 38px;
+  border: 1px solid $grayscale12;
+  border-radius: 4px;
+  padding: 12px;
+
+  &:focus-visible {
+    outline: #d9d9d9 auto 1px;
+  }
+}
+
+.Mention {
+  height: fit-content;
+  border: none;
+
+  &__option {
+    &-avatar {
+      margin-right: 6px;
+    }
+  }
+
+  textarea {
+    color: $font-color-default;
+    background-color: $color-border-gray-3;
+    border-radius: 4px;
+  }
+}
+.FloatLabel {
+  position: relative;
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: $white;
+    color: $font-color-gray;
+    padding: 0 2px;
+    line-height: 14px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+
+    &.floated {
+      top: 0px;
+      font-size: $font-size-small;
+    }
+  }
+
+  &__input {
+    &.ant-input-affix-wrapper-status-error {
+      ~ .FloatLabel__label {
+        top: 0px;
+        font-size: $font-size-small;
+        color: $color-form-error;
+      }
+    }
+
+    .ant-input-prefix > :not(:last-child),
+    .ant-input-suffix > :not(:last-child) {
+      margin-right: 0;
+
+      ~ .ant-form-item-feedback-icon-error {
+        margin-left: 8px;
+      }
+    }
+  }
+}

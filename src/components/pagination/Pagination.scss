@@ -1,0 +1,48 @@
+@use 'themes/index.scss' as *;
+
+.Pagination {
+  color: $dark-green09;
+  display: flex;
+
+  & li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon,
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon {
+    color: $dark-green09;
+  }
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next {
+    font-size: $font-size-medium;
+    line-height: 20px;
+    font-weight: 600;
+    color: $color-gray01;
+    border: 1px solid $color-border-gray;
+    border-radius: 50%;
+  }
+
+  .ant-pagination-item-active {
+    border: 2px solid $dark-green09;
+    background-color: $light-green06;
+  }
+
+  .ant-pagination-options {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .Pagination {
+    margin: 20px 0 50px 0;
+    .ant-pagination-item,
+    .ant-pagination-prev,
+    .ant-pagination-next {
+      margin-right: 8px !important;
+    }
+  }
+}

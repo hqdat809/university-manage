@@ -1,0 +1,71 @@
+@use "themes/index.scss" as *;
+
+.GridImageList {
+  &__firstRow {
+  }
+
+  &__secondRow {
+    position: relative;
+  }
+
+  &__col {
+    cursor: pointer;
+
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &-video {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    cursor: pointer;
+    // border-radius: 8px;
+  }
+}
+
+.GridImageList__col-video {
+  height: 100% !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video_small {
+  height: 300px;
+  object-fit: cover;
+}
+
+.Video__button-play {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .Video__icon-play {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

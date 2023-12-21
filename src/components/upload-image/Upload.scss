@@ -1,0 +1,112 @@
+@use 'themes/index.scss' as *;
+
+.remove_icon_image {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.2rem;
+  right: 0;
+}
+
+.UploadImage__icon-delete {
+  position: relative;
+  width: 9rem;
+  height: 9rem;
+}
+
+.UploadImage {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+    border-radius: 10px;
+    // border: 2px dashed $dark-green09;
+    // background: $light-green-gradient;
+
+    background: repeating-linear-gradient(45deg, #fff, #fff 2%, transparent 2.5%, transparent 5%) border-box,
+      $light-green-gradient;
+    cursor: pointer;
+    stroke-width: 10;
+    margin-bottom: 1rem;
+    &:hover {
+      opacity: 0.8;
+    }
+    &-text {
+      color: $dark-green09;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 0.016em;
+      font-feature-settings: 'salt' on;
+    }
+  }
+
+  &__input {
+    display: none !important;
+  }
+}
+
+.UploadImage__container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 9rem;
+  position: relative;
+  cursor: pointer;
+  stroke-width: 10;
+  display: flex;
+  border-radius: 50%;
+  background: linear-gradient(#fff 0 0) padding-box, $light-green-gradient border-box;
+  border: 2px dashed #fff;
+  div {
+    z-index: 2;
+  }
+}
+
+// .UploadImage__container::before {
+//   width: 124px;
+//   height: 124px;
+
+//   content: '';
+//   width: calc(100% - 4px);
+//   height: calc(100% - 4px);
+//   background: #ffffff;
+//   position: absolute;
+//   z-index: 0;
+//   border-radius: 10px;
+// }
+
+.UploadImage__image-container {
+  position: relative;
+}
+
+.UploadImage__image {
+  width: 9rem !important;
+  height: 9rem !important;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  .ant-skeleton-image {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.UploadImage__icon {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  .UploadImage__icon-x {
+    background-color: #fff;
+    padding: 0.2rem;
+    border-radius: 50%;
+    font-weight: 700;
+    color: $dark-green09;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+}

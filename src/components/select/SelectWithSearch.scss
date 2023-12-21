@@ -1,0 +1,18 @@
+@use 'themes/index.scss' as *;
+
+.SelectWithSearch {
+  z-index: 3000 !important;
+
+  &__option {
+    &-avatar {
+      margin-right: 6px;
+    }
+  }
+  .ant-select-selection-search {
+    margin-inline-start: -1px;
+  }
+
+  &__optionsModal {
+    z-index: 3000 !important;
+  }
+}

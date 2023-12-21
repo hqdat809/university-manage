@@ -1,0 +1,32 @@
+@use "themes/index.scss"as *;
+
+.TabHeader__container {
+  ol {
+    align-items: center !important;
+  }
+
+  .TabHeader__icon {
+    margin-right: 0.5rem;
+  }
+
+  .TabHeader__breadcrumb-name {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.016em;
+    color: #607186;
+    cursor: pointer;
+
+    &:hover {
+      color: $dark-green09;
+    }
+  }
+}
+
+.TabHeader__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: $font-color-default;
+  margin-top: 0.5rem;
+}

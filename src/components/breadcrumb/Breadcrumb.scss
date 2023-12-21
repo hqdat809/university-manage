@@ -1,0 +1,17 @@
+@use 'themes/index.scss' as *;
+
+.Breadcrumb {
+  & li {
+    font-weight: 700;
+  }
+
+  &__item {
+    font-size: $font-size-medium;
+
+    &.hasIcon {
+      svg {
+        margin-right: 15px;
+      }
+    }
+  }
+}

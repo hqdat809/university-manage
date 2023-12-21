@@ -1,0 +1,44 @@
+@use 'themes/index.scss' as *;
+
+.ResultSearchCart {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: $white;
+  border: 1px solid $color-border-gray;
+  border-radius: 8px;
+  cursor: pointer;
+
+  & + .ResultSearchCart {
+    margin-top: 12px;
+  }
+  &__avatar {
+    border-radius: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+
+    &-name {
+      display: flex;
+      max-width: 100px;
+      text-overflow: ellipsis;
+      font-weight: 700;
+      font-size: $font-size-medium;
+      line-height: 20px;
+      color: $font-color-default;
+    }
+
+    &-address {
+      display: flex;
+      align-items: center;
+      margin-top: 0px;
+      line-height: 16px;
+      font-weight: 400;
+      font-size: $font-size-small;
+      color: $grayscale11;
+    }
+  }
+}

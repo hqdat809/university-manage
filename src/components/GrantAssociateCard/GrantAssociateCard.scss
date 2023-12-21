@@ -1,0 +1,77 @@
+@use 'themes/index.scss' as *;
+
+.GrantAssociateCard {
+  margin: 16px 0;
+  border: 1px solid $grayscale16;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+
+  &.selected {
+    background: $light-green-gradient !important;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      width: calc(100% - 2px);
+      height: calc(100% - 2px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      display: block;
+      background: $whitescale0;
+      z-index: -1;
+      opacity: 1;
+      border-radius: 6px;
+    }
+  }
+
+  &__avatar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    margin-left: 8px;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-name {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    &-country {
+      display: flex;
+      align-items: center;
+      color: $grayscale11;
+      font-weight: 400;
+      gap: 7px;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    justify-content: flex-end;
+
+    input {
+      height: 18px;
+      width: 18px;
+      background-color: $dark-green09;
+
+      &:checked {
+        color: $dark-green09;
+      }
+    }
+  }
+}

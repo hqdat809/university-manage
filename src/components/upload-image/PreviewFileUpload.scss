@@ -1,0 +1,49 @@
+@use 'themes/index.scss' as *;
+
+.PreviewFileUpload {
+  display: flex;
+
+  &__file {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &-icon {
+      position: absolute;
+      z-index: 1;
+      top: 6px;
+      right: 6px;
+      cursor: pointer;
+    }
+
+    &-image {
+      border-radius: 8px;
+      object-fit: cover;
+
+      &:last-child {
+        position: relative;
+      }
+    }
+
+    &-video {
+      border-radius: 8px;
+      background-color: black;
+    }
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 128px;
+      height: 128px;
+      line-height: 128px;
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  }
+}

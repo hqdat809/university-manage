@@ -1,0 +1,25 @@
+@use 'themes/index.scss' as *;
+
+.FormItem {
+  margin-bottom: 24px;
+
+  .ant-form-item-explain-error {
+    margin-left: 12px;
+    text-align: left;
+    color: $color-form-error;
+    font-size: 12px;
+  }
+}
+
+.ant-form-item-has-error .anticon-close-circle svg,
+.ant-form-item-feedback-icon-success {
+  display: none;
+}
+
+.ant-form-item-has-error .anticon-close-circle::before {
+  content: ' ';
+  display: inline-block;
+  background: #fff url('../../assets/icons/error-icon.png') center / 14px 14px no-repeat;
+  width: 14px;
+  height: 14px;
+}

@@ -1,0 +1,19 @@
+@use "themes/index.scss" as *;
+
+.SwipperScrollBar__image {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px !important;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizonta {
+  position: relative !important;
+  margin-top: 8px;
+  opacity: 1 !important;
+  .swiper-scrollbar-drag {
+    background: $dark-green09 !important;
+    display: block !important;
+  }
+}

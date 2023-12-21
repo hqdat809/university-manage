@@ -1,0 +1,92 @@
+@use 'themes/index.scss' as *;
+
+.AllUploadedFilesPreviewModal {
+  &__carousel {
+    height: 600px;
+  }
+
+  .slick {
+    &-track {
+      background-color: $grayscale10;
+    }
+  }
+
+  .ant-carousel {
+    .slick-next,
+    .slick-prev {
+      color: $dark-green09;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .slick-next {
+      right: 15px;
+    }
+
+    .slick-prev {
+      left: 5px;
+      z-index: 1;
+    }
+  }
+
+  &__file {
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    height: 600px;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    &-icon {
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    &-image {
+      border-radius: 8px;
+      object-fit: fill;
+      max-height: 600px;
+      width: 100%;
+
+      &:last-child {
+        position: relative;
+      }
+    }
+
+    &-video {
+      border-radius: 8px;
+      background-color: black;
+      width: 752px;
+      height: 550px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .AllUploadedFilesPreviewModal {
+    &__file {
+      height: auto;
+
+      &-video {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__carousel {
+      height: auto;
+    }
+    .ant-modal-body,
+    .ant-modal-header {
+      padding: 10px;
+    }
+  }
+}

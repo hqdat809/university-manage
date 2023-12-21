@@ -1,0 +1,48 @@
+@use 'themes/index.scss' as *;
+
+.Table {
+  background: $white;
+  border: 1px solid $color-border-gray;
+  border-radius: 4px;
+
+  .ant-table-thead th.ant-table-cell {
+    background-color: $white;
+    border-bottom: 1px solid $color-border-gray;
+  }
+
+  .ant-table-pagination.ant-pagination {
+    padding-right: 16px;
+  }
+
+  .ant-table-thead
+    > tr
+    > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan]):before {
+    display: none;
+  }
+
+  .ant-table-tbody > tr > td {
+    border: none;
+    font-weight: 400;
+    line-height: 18px;
+    color: $font-color-default;
+  }
+
+  .ant-table-column {
+    &-title {
+      flex: none;
+      margin-right: 12px;
+    }
+
+    &-sorters {
+      color: $font-color-default;
+      font-size: $font-size-medium;
+      line-height: 20px;
+      font-weight: 600;
+      justify-content: start;
+    }
+
+    &-sorter {
+      color: $color-border-gray-2;
+    }
+  }
+}
